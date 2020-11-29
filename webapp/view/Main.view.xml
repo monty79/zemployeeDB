@@ -1,31 +1,19 @@
-<mvc:View controllerName="zemployeeDb.controller.Main" 
-	xmlns:html="http://www.w3.org/1999/xhtml" 
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	displayBlock="true"
-	xmlns="sap.m">
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m" controllerName="zemployeeDb.controller.Main" displayBlock="true">
 	<App>
 		<pages>
-			<Page title="{i18n>title}">
+			<Page title="{i18n>title}" backgroundDesign="Transparent">
 				<content>
 					<List id="idList">
 						<StandardListItem title="test"/>
 					</List>
-					<Button
-						id="btOne"
-						text="1Ss"
-						press="onPress1"/>
-					<Button
-						id="btTwo"
-						text="1Ss"
-						press="onPress2"/>
+					<Button id="btOne" text="1Ss" press="onPress1"/>
 					<Table id="idEmployeeTable" inset="false" items="{employee>/}">
 		                <headerToolbar>
 		                    <OverflowToolbar>
 		                        <content>
 		                            <Title text="Employee's DB" level="H1"/>
 		                            <OverflowToolbar>
-		                            	<SearchField liveChange="onSearch" width="100%" />
+		                            	<SearchField liveChange="onSearch" width="100%"/>
 		                            </OverflowToolbar>
 		                        </content>
 		                    </OverflowToolbar>
@@ -44,7 +32,7 @@
 		                        <Text text="Workplace"/>
 		                    </Column>
 		                    <Column>
-		                        <Text text="Additional Info" />
+		                        <Text text="Additional Info"/>
 		                    </Column>
 		                </columns>
 		                <items>
@@ -54,7 +42,7 @@
 		                            <Text text="{employee>emplLName}"/>
 		                            <Text text="{employee>emplPhoneNum}"/>
 		                            <Text text="{employee>emplWorkPlace}"/>
-		                            <core:Icon src="sap-icon://process"/>
+		                            <core:Icon src="sap-icon://process" alt="{i18n>Next}" useIconTooltip="false" tooltip="{i18n>Next}"/>
 		                        </cells>
 		                    </ColumnListItem>
 		                </items>
